@@ -303,6 +303,30 @@ select:focus {
   animation: pulseText 1.5s infinite ease-in-out;
 }
 
+/* Image display styling */
+.image-placeholder[style*="background-image"] {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-placeholder[style*="background-image"]::before {
+  content: none;
+}
+
+/* Error state styling */
+.error-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff4d4d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 
 @keyframes pulseText {
   0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.95); }
